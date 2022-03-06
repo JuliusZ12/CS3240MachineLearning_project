@@ -1,0 +1,55 @@
+\documentclass[11pt]{article} 
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{biblatex}
+\addbibresource{garmin.bib}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %
+\input{./Scripts/packages}								
+\input{./Scripts/ridefinitions}							
+\input{./Scripts/figuresgraphicalsettings}				
+\input{./Scripts/tablesgraphicalsettings}				
+\input{./Scripts/newcommands}							
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %
+
+\title{\Huge CS-C3240 MACHINE LEARNING - PROJECT - STAGE 1  \\Running pace preditcor}
+
+\author{Aalto University}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\section{Problem formulation}
+\label{section: 1}
+The purpose of the derived machine learning algorithm is to yield a prediction model for the next running pace during the training activity of one individual athlete in minutes per kilometre at the instance of each completed kilometre. This then provides a guideline for the runner to either increase or decrease the current pace, based on the training goals.
+
+\section{Description of the dataset: Datapoints, label and features}
+The data set used in the project consists of 42 "running activities" obtained from a "Garmin 735XT" [1] smart watch, which was provided by the athlete.  Besides high resolution time series the watch provides a template of numerous metrics with average values for every kilometre after finishing one training session. The latter will be used in the project.
+To only take into account the current fitness condition of the athlete, it was opted to utilize a training period of the last 6 months, hence from the $1^{\text{st}}$ of August 2021 to the $1^{\text{st}}$ of February 2022\\
+One datapoint will be the exact instance in time after a full kilometre has been finished, leading to a total amount of 395 datapoints.\\
+The data of the first kilometre, during which the athlete is still in a warm up phase, is most often not very representative for the whole run. Therefore, it will be omitted from the dataset. A similar justification can be made for the neglect of the last kilometre of an activity, which rarely constitutes a "fully completed kilometre".\\
+As can be read from section \ref{section: 1}, the label ${y_i}$ of the machine learning problem will be the average pace during one kilometre in minutes per kilometre.\\
+The feature set for the prediction will be composed of the following metrics:
+\begin{itemize}
+  \itemsep0pt
+  \item ${X_1}$: Cumulative completed kilometres during one activity prior to the datapoint in km
+  \item ${X_2}$: Cumulative ascent during one activity prior to the datapoint in m
+  \item ${X_3}$: Average pace of all previously completed kilometres prior to the datapoint in min per km
+  \item ${X_4}$: Average heart rate during all of the previous kilometres prior to the datapoint in bpm
+  \item ${X_5}$: Pace of the previous kilometre in min per km prior to the previous datapoint
+  \item ${X_6}$: Ascent of one kilometre in m prior to the previous datapoint
+  \item ${X_7}$: Average heart rate during the previous kilometre in bpm  prior to the previous datapoint
+\end{itemize}
+
+The metrics of the kilometer prior to the previous datapoint ($X_5 ... X_7$) allow the consideration of the recent physical load of the athlete, whereas the average and cumulative features ($X_1 ... X_4$) provide knowledge about the whole training activity.
+However, the various features will be combined to one single feature by multiplying their numeric values for each datapoint. This will yield a unitless, empirical feature, which will be called "physical load" from now on.  It is not important to obtain the precise correlation of all the listed features with the label, but rather to predict a valid numeric value for the label. Therefore, this procedure is justifiable.\\
+
+
+\section{Data cleaning of the dataset: Datapoints, label and features}
+
+
+[1]	Garmin (2022): Forerunner® 735XT. Garmin Ltd. Available online at    			\url{https://www.garmin.com/fi-FI/p/541225#specs, updated on 2/7/2022}, checked on 2/7/2022.
+
+\end{document}
+
