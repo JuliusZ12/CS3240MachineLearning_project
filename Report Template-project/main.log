@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.13)  6 MAR 2022 11:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.13)  6 MAR 2022 18:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -1406,10 +1406,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 (C:\Users\zette\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
+
+ []
+
 [1
 
 {C:/Users/zette/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
 
  []
 
@@ -1417,23 +1421,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
 \openout6 = `main.thm'.
 
 [2] (main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A4E96908327F5DC89A0237676D4C5D3A;147
-(rerunfilecheck)             After:  039209690269307EBA6E29281A8CE8D7;242.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: AE147147CFDBB3BB4A68020533851E0C;279.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39001 strings out of 479697
- 887804 string characters out of 2867133
+ 39004 strings out of 479697
+ 887835 string characters out of 2867133
  1686589 words of memory out of 3000000
- 55395 multiletter control sequences out of 15000+200000
+ 55397 multiletter control sequences out of 15000+200000
  415025 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,7n,130p,773b,1677s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1447,9 +1445,9 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zette/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zette/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zett
 e/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (2 pages, 106348 bytes).
+Output written on main.pdf (2 pages, 107801 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
